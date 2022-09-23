@@ -1,0 +1,88 @@
+{
+  "id" : "632dc36961d8f44bc6cc9883",
+  "cts" : 1663943529231,
+  "mts" : 1663943529231,
+  "createdBy" : "Darshan Shivashankar",
+  "modifiedBy" : "Darshan Shivashankar",
+  "kongAdminHost" : "http://34.121.145.236:8001/",
+  "runtime" : "kong-prod-test",
+  "workspace" : "test",
+  "swaggerId" : "630de968b7d50778dd0e6850",
+  "serviceName" : "football-standings",
+  "serviceId" : "4aea34a9-d444-4a3d-a2da-dc02cd40e9c5",
+  "service" : {
+    "serviceName" : "football-standings",
+    "protocol" : "https",
+    "host" : "api-football-standings.azharimm.site",
+    "basePath" : "/leagues",
+    "port" : 80,
+    "metadata" : {
+      "retries" : 5,
+      "connect_timeout" : 60000,
+      "write_timeout" : 60000,
+      "read_timeout" : 60000
+    }
+  },
+  "routes" : [ {
+    "routeName" : "toGetTheLeagueStandingInAParticularSeason",
+    "service" : {
+      "id" : "4aea34a9-d444-4a3d-a2da-dc02cd40e9c5"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/leagues/{id}/standings" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "trst",
+    "service" : {
+      "id" : "4aea34a9-d444-4a3d-a2da-dc02cd40e9c5"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/leagues/{id}" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "getindividualleaguedetails",
+    "service" : {
+      "id" : "4aea34a9-d444-4a3d-a2da-dc02cd40e9c5"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/leagues/{id}" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "getindividualleagueseason-details",
+    "service" : {
+      "id" : "4aea34a9-d444-4a3d-a2da-dc02cd40e9c5"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/leagues/{id}/seasons" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  } ],
+  "plugins" : [ ]
+}
